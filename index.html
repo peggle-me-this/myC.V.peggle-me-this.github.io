@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set, viewport, and description -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal website showing my experiences, skills, passions, and interests">
+    
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <!-- Page title -->
+    <title>Bronwyn Barnes - Home</title>
+</head>
+<body>
+
+    <!-- Header section with navigation links -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="education.html">Education and Skills</a>
+            <a href="work_experience.html">Work Experience</a>
+            <a href="contact_me.html">Contact me</a>
+        </nav>
+    </header>
+
+    <!-- Main content container with two sections: content and image -->
+    <div id="container">
+        <section id="content">
+            <!-- Header for the main content section -->
+            <header>
+                <h1>Hey, I'm Bronwyn Barnes,</h1>
+                <p id="intro-text">Software Engineer in the making</p>
+            </header>
+        </section>
+
+        <!-- Section for an image, in this case, a self-portrait -->
+        <section id="image">
+            <img src="americancomic_edit.jpg" alt="Cartoon Self Portrait">
+        </section>
+    </div>
+
+    <!-- Search Form (GET) -->
+    <form id="searchFormHome" action="/search" method="get">
+        <!-- Search form inputs -->
+        <label for="search">Search:</label>
+        <input type="text" class="search" name="search" id="search">
+        <input type="submit" value="Search">
+    </form>
+
+    <!-- Footer section with copyright information -->
+    <footer>
+        <p>&copy; 2024 Bronwyn Barnes. All rights reserved.</p>
+    </footer>
+
+<!-- Script for handling the search form -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var searchForm = document.getElementById('searchFormHome'); // Updated the form ID
+
+        searchForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            var searchTerm = document.querySelector('.search').value;
+            
+            performSearch(searchTerm);
+        });
+
+        // Function to perform the search logic
+        function performSearch(searchTerm) {
+
+            var searchResults = getSearchResults(searchTerm);
+
+            // Display search results
+            var contentSection = document.getElementById('content');
+            contentSection.innerHTML = '<h1>Search Results</h1>';
+            
+            if (searchResults.length > 0) {
+                searchResults.forEach(function (result) {
+                    contentSection.innerHTML += '<p>' + result + '</p>';
+                });
+            } else {
+                contentSection.innerHTML += '<p>No results found for: ' + searchTerm + '</p>';
+            }
+        }
+
+        // Example function to simulate search results
+        function getSearchResults(searchTerm) {
+            return ['Result 1', 'Result 2', 'Result 3'];
+        }
+    });
+</script>
+</body>
+</html>
