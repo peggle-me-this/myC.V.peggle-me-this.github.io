@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal website showing my experiences, skills, passions, and interests">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Bronwyn Barnes - Home</title>
+    <script>
+        // Function to toggle the display of a section
+        function toggleEducation() {
+            toggleSection('education-details');
+        }
+
+        // Function to toggle the display of a section
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="education.html">Education and Skills</a>
+            <a href="work_experience.html">Work Experience</a>
+            <a href="contact_me.html">Contact me</a>
+        </nav>
+    </header>
+
+    <!-- Content Container -->
+    <div id="content-container">
+        <!-- Quote Section -->
+        <section id="quote-section">
+            <p id="quote">"A day without learning is a day wasted. There is so much to learn and so little time to learn it."</p>
+            <p id="author"> — Albert Einstein, Wisdom from World Religions by Sir John Templeton</p>
+        </section>
+        
+        <!-- Skills and Education Section -->
+        <section id="skills-and-education">
+            <!-- Skills Section -->
+            <section id="skills-section">
+                <h2 id="skills-heading">Skills</h2>
+                <div id="skills-details" style="display: none;">
+                    <ul> 
+                        <li>Project Management - 10+ years</li>
+                        <li>Classroom Management - 10+ years</li>
+                        <li>Curriculum Development - 10+ years</li>
+                        <li>Problem Solving - 10+ years</li>
+                        <li>Effective Communication - 10+ years</li>
+                        <li>Customer Service - 10+ years</li>
+                        <li>Strong Teamwork Skills - 10+ years</li>
+                        <li>Python Programming</li>
+                    </ul>
+                </div>
+                <button onclick="toggleSection('skills-details')">More/Less</button>
+            </section>
+
+
+            <!-- Education Section -->
+            <section id="education-section">
+                <h2 id="edu-heading">Education</h2>
+                <div id="education-details" style="display: none;">
+                    <!-- Education details -->
+                    <p>Software Engineer Bootcamp</p>
+                    <p>School: Hyperion Dev</p>
+                    <p>Year of Completion: Ongoing - 2024</p>
+                    <br>
+                    <p>Qualification: NQF5</p>
+                    <p>School: College of Modern Montessori</p>
+                    <p>Year of Completion: 2017</p>
+                    <br>
+                    <p>Qualification: Matric</p>
+                    <p>School: Intec College</p>
+                    <p>Year of Completion: 2005</p>
+                    <br>
+                    <p>High School</p>
+                    <p>School: Greenside High</p>
+                    <p>Years Attended: 2000 - 2004</p>
+                </div>
+                <button onclick="toggleEducation('education-details')">More/Less</button>
+            </section>
+        </section>
+    
+        <!-- Search Form (GET) -->
+        <form id="searchFormEdu" action="/search" method="get">
+            <!-- Your search form here -->
+            <label for="search"></label>
+            <input type="text" class="search" name="search" id="search">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Footer content -->
+        <p>&copy; 2024 Bronwyn Barnes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var searchForm = document.getElementById('searchFormContact');
+
+            searchForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                var searchTerm = document.querySelector('.search').value;
+                
+                performSearch(searchTerm);
+            });
+
+            // Function to perform the search logic
+            function performSearch(searchTerm) {
+                var searchResults = getSearchResults(searchTerm);
+
+                // Display search results
+                var contentSection = document.getElementById('content');
+                contentSection.innerHTML = '<h1>Search Results</h1>';
+                
+                if (searchResults.length > 0) {
+                    searchResults.forEach(function (result) {
+                        contentSection.innerHTML += '<p>' + result + '</p>';
+                    });
+                } else {
+                    contentSection.innerHTML += '<p>No results found for: ' + searchTerm + '</p>';
+                }
+            }
+
+            // Example function to simulate search results
+            function getSearchResults(searchTerm) {
+                return ['Result 1', 'Result 2', 'Result 3'];
+            }
+        });
+    </script>
+</body>
+</html>
+

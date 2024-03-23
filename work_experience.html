@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal website showing my experiences, skills, my passions, and interests">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Bronwyn Barnes - Work Experience</title>
+
+    <!-- JavaScript for toggling sections -->
+    <script>
+        // Function to toggle the display of a specific work entry
+        function toggleWorkExperience(jobId) {
+            toggleSection('work-experience-details-' + jobId);
+        }
+
+        // Function to toggle the display of a section
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="education.html">Education and Skills</a>
+            <a href="work_experience.html">Work Experience</a>
+            <a href="contact_me.html">Contact me</a>
+        </nav>
+    </header>
+
+    <!-- Work Experience Section -->
+    <section id="work-experience">
+        <h2 id="work">Work Experience</h2>
+    
+        <!-- Work experience details - Pre-Primary -->
+        <div class="work-entry">
+            <h3>Pre-Primary Principal/ Directress</h3>
+            <p>Duration: 01/2022 - 12/2023</p>
+            <button onclick="toggleWorkExperience('pre-primary')">More/Less</button>
+            <div id="work-experience-details-pre-primary" style="display: none;">
+                <strong>Description:</strong>
+                <ul>
+                    <li>Oversaw daily operations, ensuring a safe, productive learning environment.</li>
+                    <li>Actively involved in teaching responsibilities while developing and implementing school policies.</li>
+                    <li>Cultivated positive relationships with parents, students, and the community.</li>
+                    <li>Managed budgeting, financial planning, and efficient resource allocation.</li>
+                    <li>Collaborated on curriculum development, ensuring alignment with educational standards.</li>
+                    <li>Implemented marketing strategies, including social media and promotional activities.</li>
+                    <li>Utilized technology for efficient record-keeping and communication.</li>
+                </ul>
+            </div>
+        </div>
+              
+        <!-- Work experience details - Montessori -->
+        <div class="work-entry">
+            <h3>Montessori Directress Preprimary</h3>
+            <p>Duration: 08/2010 - 12/2023</p>
+            <button onclick="toggleWorkExperience('montessori')">More/Less</button>
+            <div id="work-experience-details-montessori" style="display: none;">
+                <strong>Description:</strong>
+                <ul>
+                    <li>Developed positive relationships with both children and parents.</li>
+                    <li>Established and enforced behavior rules, provided clear guidelines for children in classrooms.</li>
+                    <li>Ensured fundamental needs were met and offered diverse materials for learning and exploration.</li>
+                    <li>Managed classroom activities, organizing lessons, playtime, breaks, and meals.</li>
+                    <li>Monitored, recorded, and reported on children's development.</li>
+                    <li>Collaborated with colleagues on comprehensive lesson plans and promoted social skills development.</li>
+                    <li>Managed inventory of classroom materials and facilitated diverse lessons.</li><!-- ... (rest of the details) ... -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-entry">
+            <h3>Aupair</h3>
+            <p>Duration: 10/2023 - 12/2023</p>
+            <button onclick="toggleWorkExperience('aupair1')">More/Less</button>
+            <div id="work-experience-details-aupair1" style="display: none;">
+                <strong>Description:</strong>
+                <ul>
+                    <li>Provided short-term assistance to a family with four children, assisting with transportation, homework, 
+                        and educational activities.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-entry">
+            <h3>Aupair</h3>
+            <p>Duration: 04/2020 - 07/2020</p>
+            <button onclick="toggleWorkExperience('aupair2')">More/Less</button>
+            <div id="work-experience-details-aupair2" style="display: none;">
+                <strong>Description:</strong>
+                <ul>
+                    <li>Supported a family with twin 6-year-old girls during lockdown. Facilitated remote learning, 
+                        assisted with homework, and organized educational activities.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-entry">
+            <h3>Bartender</h3>
+            <p>Duration: 08/2009 - 12/2012</p>
+            <button onclick="toggleWorkExperience('bartender')">More/Less</button>
+            <div id="work-experience-details-bartender" style="display: none;">
+                <strong>Description:</strong>
+                <ul>    
+                    <li>Proficient in POS platforms for transactions.</li>
+                    <li>Managed stock inventory efficiently.</li>
+                    <li>Applied strong time management skills to complete tasks swiftly. </li>
+                    <li>Worked collaboratively in a fast-paced restaurant environment, emphasizing sales and customer 
+                        satisfaction.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-entry">
+            <h3>Event Coordinator</h3>
+            <p>Duration: 01/2009 - 12/2009</p>
+            <button onclick="toggleWorkExperience('coordinator')">More/Less</button>
+            <div id="work-experience-details-coordinator" style="display: none;">
+                <strong>Description:</strong>
+                <ul>    
+                    <li>Ensured the success of events through meticulous planning and execution, managing both onsite 
+                        logistics and remote coordination</li>
+                    <li>Researched and secured competitive prices for venues, hotels, flights, entertainment and 
+                        branding</li>
+                    <li>I also served as the Personal Assistant to the Event Planner, providing support in various tasks.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-entry">
+            <h3>Manager/Bartender</h3>
+            <p>Duration: 01/2006 - 12/2007</p>
+            <button onclick="toggleWorkExperience('manager')">More/Less</button>
+            <div id="work-experience-details-manager" style="display: none;">
+                <strong>Description:</strong>
+                <ul>    
+                    <li>Managed stock of both kitchen and bar, managed orders, and staff in a dynamic pub environment.</li>
+                    <li>Operated POS platform for transactions and cash handling.</li>
+                    <li>Contributed signficantly to overall management, overseeing entertainer bookings, payments, and 
+                        contributing to a positive, customer-centric atmosphere, beyond regular bartending duties</li>
+                    <li>Overseeing staff, I handled responsibilities ranging from hiring, onboarding, and training to 
+                        ensuring adherence to hygiene standards</li>
+                </ul>
+            </div>
+        </div>
+
+    <!-- Search Form (GET) -->
+    <form id="searchFormWork" action="/search" method="get">
+        <!-- Your search form here -->
+        <label for="search"></label>
+        <input type="text" class="search" name="search" id="search">
+        <input type="submit" value="Search">
+    </form>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Footer content -->
+        <p>&copy; 2024 Bronwyn Barnes. All rights reserved.</p>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var searchForm = document.getElementById('searchFormWork'); 
+
+        searchForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            var searchTerm = document.querySelector('.search').value;
+            
+
+            performSearch(searchTerm);
+        });
+
+        // Function to perform the search logic
+        function performSearch(searchTerm) {
+            var searchResults = getSearchResults(searchTerm);
+
+            // Display search results
+            var contentSection = document.getElementById('content-container');
+            contentSection.innerHTML = '<h1>Search Results</h1>';
+            
+            if (searchResults.length > 0) {
+                searchResults.forEach(function (result) {
+                    contentSection.innerHTML += '<p>' + result + '</p>';
+                });
+            } else {
+                contentSection.innerHTML += '<p>No results found for: ' + searchTerm + '</p>';
+            }
+        }
+
+        // Example function to simulate search results
+        function getSearchResults(searchTerm) {
+            return ['Result 1', 'Result 2', 'Result 3'];
+        }
+    });
+</script>
+
+</body>
+</html>

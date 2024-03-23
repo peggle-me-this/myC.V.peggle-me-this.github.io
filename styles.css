@@ -1,0 +1,421 @@
+/* General Styles */
+body {
+  background-color: wheat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Bakersville', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+/* Header Styles */
+h1 {
+  color: steelblue;
+  font-family: 'lucida handwriting', cursive;
+  background-color: wheat;
+  font-size: 28px;
+  padding: 50px;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+/* About Page Header Styles */
+h1.about-page {
+  color: steelblue;
+  font-family: 'lucida handwriting', cursive;
+  background-color: wheat;
+  font-size: 40px;
+  padding: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Contact Heading Styles */
+h2.contact-heading {
+  color: steelblue;
+  font-family: 'lucida handwriting', cursive;
+  background-color: wheat;
+  font-size: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding: 1px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Styles for h2 within the Skills and Education sections */
+#skills-heading h2, #edu-heading h2 {
+  color: steelblue;
+  font-family: 'lucida handwriting', cursive;
+  background-color: wheat;
+  font-size: 32px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-right: 850px;
+}
+
+/* Styles for h2 within the Work Experience section */
+h2 {
+  color: steelblue;
+  font-family: 'lucida handwriting', cursive;
+  background-color: wheat;
+  font-size: 38px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 850px;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: wheat;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+main img {
+  width: 65%;
+  height: auto;
+}
+
+/* Container Styles */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+/* Content and Image Styles */
+#content,
+#image {
+  width: 48%;
+  box-sizing: border-box;
+}
+
+#image img {
+  width: 70%;
+  margin-left: 160px;
+  margin-top: 50px;
+  padding-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: wheat;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Search Bar Section Styles */
+#search,
+.search-section {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  background-color: white;
+  padding: 15px;
+}
+
+/* Search Form Styles */
+#search form,
+.search-section form {
+  display: flex;
+  justify-content: center;
+}
+
+/* Search Input Styles */
+#search input[type="text"],
+.search-section input[type="text"] {
+  padding: 50px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 250px;
+}
+
+/* Search Button Styles */
+#search input[type="submit"],
+.search-section input[type="submit"] {
+  background-color: steelblue;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#search input[type="submit"]:hover,
+.search-section input[type="submit"]:hover {
+  background-color: midnightblue;
+}
+
+/* Search form on the Index/Home page */
+#searchFormHome {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+/* Adjust the existing styles for the search input */
+#searchFormHome .search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+/* Search form on the About Me page */
+#searchFormAbout {
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Adjust the existing styles for the search input */
+#searchFormAbout .search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px; 
+  display: inline-block;
+  padding-top: 20px;
+}
+
+/* Search form on the Education page */
+#searchFormEdu {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+/* Adjust the existing styles for the search input */
+#searchFormEdu .search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+/* Search form for the Work Experience page */
+#searchFormWork {
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Adjust the existing styles for the search input */
+#searchFormWork .search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px; /* Set a fixed width or adjust as needed */
+  display: inline-block;
+  padding-top: 20px;
+}
+
+#searchFormContact {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Adjust the existing styles for the search input */
+#searchFormContact .search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px; 
+  display: inline-block;
+  padding-top: 20px;
+}
+
+/* Quote Section Styles */
+#quote {
+  margin-top: 20px;
+  text-align: center;
+  color: saddlebrown;
+  font-family: Luminari, fantasy;
+  font-size: 24px;
+}
+
+#author {
+  margin-top: 20px;
+  margin-left: 350px;
+  color: saddlebrown;
+  font-family: Luminari, fantasy;
+  font-size: 22px;
+}
+
+/* Additional Styling for Specific Pages */
+#intro-text {
+  font-style: italic;
+  color: midnightblue;
+  margin-left: 220px;
+  padding-bottom: 140px;
+}
+
+#bio1,
+#bio2 {
+  font-style: italic;
+  color: midnightblue;
+  padding-left: 50px;
+  padding-right: 300px;
+}
+
+#bio3 {
+  font-style: italic;
+  color: midnightblue;
+  padding-left: 50px;
+  padding-right: 300px;
+  padding-bottom: 33px;
+}
+
+/* Button Styles */
+button {
+  background-color: slateblue;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding-bottom: 10px;
+}
+
+button:hover {
+  background-color: midnightblue;
+}
+
+/* Skills and Education Styles */
+#skills-section,
+#skills-details {
+  font-style: italic;
+  color: midnightblue;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 1px;
+}
+
+#education-section,
+#education-details {
+  font-style: italic;
+  font-size: 16px;
+  color: midnightblue;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 104px;
+  margin-right: 1px;
+}
+
+/* Styles for the Work Experience section */
+#work-experience {
+  font-style: italic;
+  font-size: 16px;
+  color: midnightblue;
+  padding-left: 120px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  margin-right: 1px;
+}
+
+#work-experience-details-pre-primary,
+#work-experience-details-montessori,
+#work-experience-details-aupair1,
+#work-experience-details-aupair2,
+#work-experience-details-bartender,
+#work-experience-details-coordinator,
+#work-experience-details-manager {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  margin-right: 1px;
+}
+
+#contact-details {
+  text-align: center;
+  color: saddlebrown;
+  padding-left: 480px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+/* Contact Form Styles */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px; 
+  margin: 0 20px; 
+  padding-right: 940px;
+}
+
+#contact-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+#contact-form input[type="submit"] {
+  background-color: steelblue;
+  color: white;
+  padding: 12px 20px;
+  padding-bottom: 0px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#contact-form input[type="submit"]:hover {
+  background-color: midnightblue;
+}
+
+/* Home Page Styles */
+body.home {
+  display: flex;
+}
+
+section.home-quote {
+  width: 50%;
+}

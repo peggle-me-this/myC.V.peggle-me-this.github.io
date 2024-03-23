@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set, viewport, and description -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal website showing my experiences, skills, my passions and interests">
+    
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <!-- Page title -->
+    <title>Bronwyn Barnes - About Me</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="education.html">Education and Skills</a>
+            <a href="work_experience.html">Work Experience</a>
+            <a href="contact_me.html">Contact me</a>
+        </nav>
+    </header>
+
+    <!-- About Me Page Content -->
+    <section>
+        <h1 class="about-page">A bit about me,</h1>
+        <p id="bio1"> A self-proclaimed food geek, gamer, and nerd, I find joy in all creations in the kitchen and 
+            immersing myself in gaming worlds. I have found a new love for programming 
+            and I am investigating all I can about the vast domain of coding and technology.</p>
+        <br>
+        <p id="bio2"> With a passion for education, I've spent years shaping young minds and fostering a love for 
+            learning. Drawn to the ever-changing world of technology, I decided to explore coding, seeing 
+            it as a way to expand my creative horizons. The shift from the classroom to programming has been 
+            an exciting journey, fueled by a desire to understand and actively contribute to the digital realm. 
+            I have found joy in the blend of teaching experience and coding skills, not just mastering a 
+            new language but developing digital solutions and exploring the endless possibilities of coding. 
+            In bridging education and technology, my problem-solving skills acquired through teaching integrate 
+            effectively with coding, unlocking creativity, and new diverse opportunities.</p>
+        <br>
+        <p id="bio3"> Some of my other interests, which I feel strongly about, include personal growth, hiking, and gardening. 
+            Dedicating time to my growth and learning is very important to me. Exploring nature and 
+            exercising through hiking and cultivating beautiful spaces and food through gardening. I believe 
+            a holistic perspective is the overall nourishment of human life. Join me on this journey of 
+            exploration and growth, where each day brings new opportunities to learn, create, and inspire. </p>
+        <br>
+    </section>
+
+    <!-- Search Form (GET) for About Me Page -->
+    <form id="searchFormAbout" action="/search" method="get">
+        <!-- Search form inputs -->
+        <label for="search">Search:</label>
+        <input type="text" class="search" name="search" id="search">
+        <input type="submit" value="Search">
+    </form>
+           
+    <!-- Footer Section -->
+    <footer>
+        <!-- Footer content -->
+        <p>&copy; 2024 Bronwyn Barnes. All rights reserved.</p>
+    </footer>
+
+ <!-- Script for handling the search form on Education Page -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var searchForm = document.getElementById('searchFormEdu'); // Corrected form ID
+
+        searchForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            var searchTerm = document.querySelector('.search').value;
+            
+            performSearch(searchTerm);
+        });
+
+        // Function to perform the search logic
+        function performSearch(searchTerm) {
+            var searchResults = getSearchResults(searchTerm);
+
+            // Display search results
+            var contentSection = document.getElementById('content-container');
+            contentSection.innerHTML = '<h1>Search Results</h1>';
+            
+            if (searchResults.length > 0) {
+                searchResults.forEach(function (result) {
+                    contentSection.innerHTML += '<p>' + result + '</p>';
+                });
+            } else {
+                contentSection.innerHTML += '<p>No results found for: ' + searchTerm + '</p>';
+            }
+        }
+
+        // Example function to simulate search results
+        function getSearchResults(searchTerm) {
+            return ['Result 1', 'Result 2', 'Result 3'];
+        }
+    });
+</script>
